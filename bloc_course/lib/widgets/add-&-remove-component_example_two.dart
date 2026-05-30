@@ -1,8 +1,8 @@
 // ignore: file_names
 import 'package:bloc_course/barrel_file.dart';
 
-class AddButton extends StatelessWidget {
-  const AddButton({super.key});
+class AddButtonExampleTwo extends StatelessWidget {
+  const AddButtonExampleTwo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +15,8 @@ class AddButton extends StatelessWidget {
   }
 }
 
-class RemoveButton extends StatelessWidget {
-  const RemoveButton({super.key});
+class RemoveButtonExampleTwo extends StatelessWidget {
+  const RemoveButtonExampleTwo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +29,10 @@ class RemoveButton extends StatelessWidget {
   }
 }
 
-class TextCounter extends StatelessWidget {
+class TextCounterExampleTwo extends StatelessWidget {
   final Color color;
   final int counter;
-  const TextCounter({super.key, required this.counter, this.color = Colors.black});
+  const TextCounterExampleTwo({super.key, required this.counter, this.color = Colors.black});
 
   @override
   Widget build(BuildContext context) {

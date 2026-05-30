@@ -9,7 +9,12 @@ class ExampleTwo extends StatelessWidget {
       create: (context) => CounterCubitExampleTwo(),
       child: BaseExampleScaffold(
         title: 'Example 2',
-        description: """Counter Cubit""",
+        description: """
+Counter Cubit
+change text color when increment and decrement
+- green when increment
+- red when decrement
+- black when no change""",
 
         children: [
           SizedBox(
@@ -18,21 +23,21 @@ class ExampleTwo extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  AddButton(),
+                  AddButtonExampleTwo(),
                   SizedBox(height: 20),
                   BlocBuilder<CounterCubitExampleTwo, CounterState>(
                     builder: (context, state) {
                       if (state is IncrementCounter) {
-                        return TextCounter(counter: state.counter, color: Colors.green);
+                        return TextCounterExampleTwo(counter: state.counter, color: Colors.green);
                       } else if (state is DecrementCounter) {
-                        return TextCounter(counter: state.counter, color: Colors.red);
+                        return TextCounterExampleTwo(counter: state.counter, color: Colors.red);
                       } else {
-                        return TextCounter(counter: state.counter, color: Colors.black);
+                        return TextCounterExampleTwo(counter: state.counter, color: Colors.black);
                       }
                     },
                   ),
                   SizedBox(height: 20),
-                  RemoveButton(),
+                  RemoveButtonExampleTwo(),
                 ],
               ),
             ),

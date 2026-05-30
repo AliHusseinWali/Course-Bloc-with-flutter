@@ -10,7 +10,10 @@ class ExampleOne extends StatelessWidget {
       create: (context) => CounterCubitExampleOne(),
       child: BaseExampleScaffold(
         title: 'Example 1',
-        description: """Counter Cubit""",
+        description: """
+Counter Cubit
+- increment and decrement counter
+- text counter""",
 
         children: [
           SizedBox(
@@ -19,18 +22,18 @@ class ExampleOne extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  AddButton(),
+                  AddButtonExampleOne(),
                   SizedBox(height: 20),
                   BlocBuilder<CounterCubitExampleOne, CounterState>(
                     builder: (context, state) {
                       print("--------------------------------");
                       print("--------------Emit--------------");
                       print("--------------------------------");
-                      return TextCounter(counter: state.counter);
+                      return TextCounterExampleOne(counter: state.counter);
                     },
                   ),
                   SizedBox(height: 20),
-                  RemoveButton(),
+                  RemoveButtonExampleOne(),
                 ],
               ),
             ),
