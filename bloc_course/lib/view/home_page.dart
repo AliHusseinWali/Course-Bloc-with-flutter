@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
               alignment: WrapAlignment.center,
               children: [
                 _buildButtonWrapper(buttonWidth, "Example 1", page: ExampleOne()),
-                // _buildButtonWrapper(buttonWidth, "Example 2", page: ExampleTwo()),
+                _buildButtonWrapper(buttonWidth, "Example 2", page: ExampleTwo()),
                 // _buildButtonWrapper(buttonWidth, "Example 3", page: ExampleThree()),
                 // _buildButtonWrapper(buttonWidth, "Example 4", page: ExampleFour()),
                 // _buildButtonWrapper(buttonWidth, "Example 5", page: ExampleFive()),

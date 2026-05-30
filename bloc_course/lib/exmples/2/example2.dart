@@ -1,15 +1,14 @@
 import 'package:bloc_course/barrel_file.dart';
 
-class ExampleOne extends StatelessWidget {
-  const ExampleOne({super.key});
+class ExampleTwo extends StatelessWidget {
+  const ExampleTwo({super.key});
 
   @override
   Widget build(BuildContext context) {
-    print("----------Build----------");
     return BlocProvider(
       create: (context) => CounterCubit(),
       child: BaseExampleScaffold(
-        title: 'Example 1',
+        title: 'Example 2',
         description: """Counter Cubit""",
 
         children: [
@@ -23,10 +22,13 @@ class ExampleOne extends StatelessWidget {
                   SizedBox(height: 20),
                   BlocBuilder<CounterCubit, CounterState>(
                     builder: (context, state) {
-                      print("--------------------------------");
-                      print("--------------Emit--------------");
-                      print("--------------------------------");
-                      return TextCounter(counter: state.counter);
+                      if (state is IncrementCounter) {
+                        return TextCounter(counter: state.counter, color: Colors.green);
+                      } else if (state is DecrementCounter) {
+                        return TextCounter(counter: state.counter, color: Colors.red);
+                      } else {
+                        return TextCounter(counter: state.counter, color: Colors.black);
+                      }
                     },
                   ),
                   SizedBox(height: 20),

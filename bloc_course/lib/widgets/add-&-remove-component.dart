@@ -1,6 +1,5 @@
 import 'package:bloc_course/barrel_file.dart';
 
-
 class AddButton extends StatelessWidget {
   const AddButton({super.key});
 
@@ -29,12 +28,13 @@ class RemoveButton extends StatelessWidget {
   }
 }
 
-class TextCunter extends StatelessWidget {
+class TextCounter extends StatelessWidget {
+  final Color color;
   final int counter;
-  const TextCunter({super.key, required this.counter});
+  const TextCounter({super.key, required this.counter, this.color = Colors.black});
 
   @override
   Widget build(BuildContext context) {
-    return Text("$counter", style: TextStyle(fontSize: 40));
+    return Text("$counter", style: TextStyle(fontSize: 40, color: color));
   }
 }
