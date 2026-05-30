@@ -7,7 +7,7 @@ class ExampleOne extends StatelessWidget {
   Widget build(BuildContext context) {
     print("----------Build----------");
     return BlocProvider(
-      create: (context) => CounterCubit(),
+      create: (context) => CounterCubitExampleOne(),
       child: BaseExampleScaffold(
         title: 'Example 1',
         description: """Counter Cubit""",
@@ -21,7 +21,7 @@ class ExampleOne extends StatelessWidget {
                 children: [
                   AddButton(),
                   SizedBox(height: 20),
-                  BlocBuilder<CounterCubit, CounterState>(
+                  BlocBuilder<CounterCubitExampleOne, CounterState>(
                     builder: (context, state) {
                       print("--------------------------------");
                       print("--------------Emit--------------");

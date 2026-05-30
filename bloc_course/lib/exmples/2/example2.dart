@@ -6,7 +6,7 @@ class ExampleTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => CounterCubit(),
+      create: (context) => CounterCubitExampleTwo(),
       child: BaseExampleScaffold(
         title: 'Example 2',
         description: """Counter Cubit""",
@@ -20,7 +20,7 @@ class ExampleTwo extends StatelessWidget {
                 children: [
                   AddButton(),
                   SizedBox(height: 20),
-                  BlocBuilder<CounterCubit, CounterState>(
+                  BlocBuilder<CounterCubitExampleTwo, CounterState>(
                     builder: (context, state) {
                       if (state is IncrementCounter) {
                         return TextCounter(counter: state.counter, color: Colors.green);

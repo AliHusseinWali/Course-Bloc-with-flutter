@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:bloc_course/barrel_file.dart';
 
 class AddButton extends StatelessWidget {
@@ -7,7 +8,7 @@ class AddButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {
-        context.read<CounterCubit>().increment();
+        context.read<CounterCubitExampleTwo>().increment();
       },
       icon: Icon(Icons.add, size: 40),
     );
@@ -21,7 +22,7 @@ class RemoveButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {
-        context.read<CounterCubit>().decrement();
+        context.read<CounterCubitExampleTwo>().decrement();
       },
       icon: Icon(Icons.remove, size: 40),
     );
