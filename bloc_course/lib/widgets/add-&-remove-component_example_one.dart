@@ -1,37 +1,37 @@
 import 'package:bloc_course/barrel_file.dart';
 
-class AddButtonExampleOne extends StatelessWidget {
-  const AddButtonExampleOne({super.key});
+class AddButtonEx1 extends StatelessWidget {
+  const AddButtonEx1({super.key});
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {
-        context.read<CounterCubitExampleOne>().increment();
+        context.read<CounterCubitEx1>().increment();
       },
       icon: Icon(Icons.add, size: 40),
     );
   }
 }
 
-class RemoveButtonExampleOne extends StatelessWidget {
-  const RemoveButtonExampleOne({super.key});
+class RemoveButtonEx1 extends StatelessWidget {
+  const RemoveButtonEx1({super.key});
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {
-        context.read<CounterCubitExampleOne>().decrement();
+        context.read<CounterCubitEx1>().decrement();
       },
       icon: Icon(Icons.remove, size: 40),
     );
   }
 }
 
-class TextCounterExampleOne extends StatelessWidget {
+class TextCounterEx1 extends StatelessWidget {
   final Color color;
   final int counter;
-  const TextCounterExampleOne({super.key, required this.counter, this.color = Colors.black});
+  const TextCounterEx1({super.key, required this.counter, this.color = Colors.black});
 
   @override
   Widget build(BuildContext context) {

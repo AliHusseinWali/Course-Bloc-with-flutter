@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 _buildButtonWrapper(buttonWidth, "Example 1", page: ExampleOne()),
                 _buildButtonWrapper(buttonWidth, "Example 2", page: ExampleTwo()),
-                // _buildButtonWrapper(buttonWidth, "Example 3", page: ExampleThree()),
+                _buildButtonWrapper(buttonWidth, "Example 3", page: ExampleThree()),
                 // _buildButtonWrapper(buttonWidth, "Example 4", page: ExampleFour()),
                 // _buildButtonWrapper(buttonWidth, "Example 5", page: ExampleFive()),
                 // _buildButtonWrapper(buttonWidth, "Example 6", page: ExampleSix()),
